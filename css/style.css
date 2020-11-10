@@ -1,0 +1,40 @@
+@import url(all.css);
+
+img{
+    width: 100px;
+    height: 100px;
+
+}
+#cons{
+    background-color: black;
+    background-position: center;
+    width: 35em;
+    height: 50em;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0.6em;
+    border-radius: 60px;
+}
+h1,h2,h3,h4{
+    font-family: 'Balsamiq Sans';
+}
+
+h1{
+    font-size: 5em;
+    color: rgb(255, 255, 255);
+}
+
+h2{
+    font-size: 3em;
+    color: rgb(218, 236, 252);
+}
+
+h3{
+    font-size: 1em;
+    color: cyan;
+}
+
+h4{
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+}
