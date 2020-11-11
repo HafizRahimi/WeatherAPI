@@ -7,8 +7,7 @@ window.addEventListener("load", ()=>{
     let locationTimezone = document.querySelector(".location-timezone");
     let locationIcon = document.querySelector(".weather-icon");
     let city = document.getElementById("city");
-    let temp_max = document.getElementById("temp_max");
-    let temp_min = document.getElementById("temp_min");
+
 
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition( position =>{
@@ -17,7 +16,7 @@ window.addEventListener("load", ()=>{
             long = position.coords.longitude;
 
 
-            const api =`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=6d5b0798e49091ad6c0d2506620071b6`;
+            const api =`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&lang=sv&appid=6d5b0798e49091ad6c0d2506620071b6`;
             
             fetch(api)
             .then(response => {
@@ -27,14 +26,21 @@ window.addEventListener("load", ()=>{
                 
                 console.log(data.main);
 
+
                 const {description} = data.weather[0];
                 const {temp} = data.main;
                 const cityName = data.name;
                 const {icon} = data.weather[0];
 
                 console.log(icon);
+                console.log(temp);
+                
+                // let celsius = Math.floor((temp - 32) * 5 / 9);
+                // console.log(celsius);
+
+
                 temperatureDescription.textContent = description;
-                temperatureDegree.textContent = temp;
+                temperatureDegree.textContent = Math.floor(temp) ;
                 locationTimezone.textContent = cityName;
                 city.textContent = cityName;
                 locationIcon.src = `img/${icon}.png`;

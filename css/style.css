@@ -3,8 +3,19 @@
 img{
     width: 100px;
     height: 100px;
-
 }
+
+.celsius{
+    display: inline;
+}
+
+.temperature-degree{
+    display: inline;
+    font-size: 10em !important;
+}
+
+
+
 #cons{
     background-color: black;
     background-position: center;
