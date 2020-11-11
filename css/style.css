@@ -15,7 +15,6 @@ img{
 }
 
 
-
 #cons{
     background-color: black;
     background-position: center;
@@ -25,6 +24,7 @@ img{
     text-align: center;
     padding-top: 0.6em;
     border-radius: 60px;
+    border: 0.7em solid #61b8ff;
     margin-top: 3em;
 }
 h1,h2,h3,h4{
